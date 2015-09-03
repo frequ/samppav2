@@ -1,0 +1,54 @@
+#scroll{
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    text-align: center;
+
+    p{
+        color: $lightbg;
+    }
+
+    a{
+        margin: 0 auto;
+        display: block;
+        width: 200px;
+    }
+
+    .scroll-ball{
+        border-radius: 50%;
+        margin: 0 auto;
+        width: 90px;
+        height: 90px;
+        background: rgb(51,51,51);
+        background: rgba(51,51,51,.6);
+        z-index: 6;
+
+        i{
+            color: $lightbg;
+            line-height: 1.5;
+            animation: bounce 1.3s ease-in-out infinite;
+            animation-play-state: paused;
+            width: 90px;
+
+            &:hover{
+                animation-play-state: running;
+            }
+        }
+    }
+}
+
+@keyframes bounce{
+    0% {
+        line-height: 1.5;
+    }
+
+    50% {
+        line-height: 2;
+    }
+
+    100% {
+        line-height: 1.5;
+    }
+}
