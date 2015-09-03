@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     rename = require('gulp-rename'),
     notify = require('gulp-notify'),
     bower = require('gulp-bower'),
-    sourcemaps = require('gulp-sourcemaps');
+    sourcemaps = require('gulp-sourcemaps'),
+    uglify = require('gulp-uglify');
 
 var config = {
     sassPath: 'public/styles/sass',
@@ -71,12 +72,21 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('public/styles'));
 });
 
+gulp.task('uglify', function() {
+    return gulp.src('public/js/app.js')
+        .pipe(rename({suffix: '.min'}))
+        .pipe(uglify())
+        .pipe(gulp.dest('public/js'));
+});
+
 gulp.task('watch', function() {
     gulp.watch(config.sassPath + '/*.scss', ['styles']);
     gulp.watch('public/*.html', notifyLiveReload);
     gulp.watch('public/styles/*.css', notifyLiveReload);
+    gulp.watch('public/js/*.js', notifyLiveReload);
+    gulp.watch('public/js/app.js', ['uglify']);
 });
 
-gulp.task('default', ['bower', 'icons', 'styles', 'express', 'livereload', 'watch'], function() {
+gulp.task('default', ['bower', 'icons', 'styles', 'uglify', 'express', 'livereload', 'watch'], function() {
 
 });
