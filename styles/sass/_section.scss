@@ -22,5 +22,10 @@ section{
         img{
             margin-bottom: 1rem;
         }
+
+        .gray-card{
+            border-color: $graybg;
+            background-color: $graybg;
+        }
     }
 }
