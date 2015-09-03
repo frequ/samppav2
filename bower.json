@@ -1,0 +1,19 @@
+{
+  "name": "samppav2",
+  "version": "0.0.0",
+  "authors": [
+    "frequ <samppa.valkama@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~4.0.0",
+    "font-awesome": "fontawesome#~4.4.0"
+  }
+}
