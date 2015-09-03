@@ -20,10 +20,9 @@
         var displayHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
         var h1h = $('header article .container h1').innerHeight();
         var marginTop = (displayHeight-h1h)/2;
-
+        
         $('header article').css('height', displayHeight);
         $('header article .container h1').css('margin-top', marginTop);
-
     }
 
     window.onresize = function(event) {
