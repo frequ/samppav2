@@ -1,7 +1,8 @@
 .DS_Store
+**/.DS_Store
 node_modules
 bower_components
 .sass-cache
-/public/sitemap.xml
-/public/styles/*.css
-/public/styles/*.map
+public/sitemap.xml
+public/styles/*.css
+public/styles/*.map
