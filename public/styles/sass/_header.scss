@@ -1,0 +1,46 @@
+header{
+    width: 100%;
+    z-index: 1;
+
+    article{
+        background: $graybg;
+        background: url('../assets/kwai.jpg') no-repeat center center;
+        background-size: cover;
+        color: #333;
+        text-align: center;
+
+        .container{
+
+            h1{
+                position: absolute;
+                margin: 0 auto;
+                left: 0;
+                right: 0;
+                width: 100%;
+                display: table-cell;
+                padding: 50px 10px;
+                background-color: $lightbg;
+                text-align: center;
+                vertical-align: middle;
+                transition: width 0.5s linear;
+                z-index: 5;
+
+                small{
+                    font-size: 60%;
+                    padding-top: 1rem;
+                    display: block;
+                }
+
+                i{
+                    color: $orange;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 34em) {
+    header article .container h1 {
+        width: 8em;
+    }
+}

@@ -1,0 +1,26 @@
+section{
+    background-color: $lightbg;
+
+    .container{
+        padding: 15px 15px 30px 15px;
+
+        h1, h4{
+            color: $orange;
+        }
+
+        a{
+            color: $linkblue;
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+
+        p{
+            font-size: 1.2rem;
+        }
+
+        img{
+            margin-bottom: 1rem;
+        }
+    }
+}
