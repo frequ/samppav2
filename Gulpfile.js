@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     notify = require('gulp-notify'),
     bower = require('gulp-bower'),
     sourcemaps = require('gulp-sourcemaps'),
-    uglify = require('gulp-uglify');
+    uglify = require('gulp-uglify'),
+    ghPages = require('gulp-gh-pages');
 
 var config = {
     sassPath: 'public/styles/sass',
@@ -45,6 +46,11 @@ gulp.task('bower', function() {
 gulp.task('icons', function() {
     return gulp.src(config.bowerPath + '/font-awesome/fonts/**.*')
         .pipe(gulp.dest('public/fonts'));
+});
+
+gulp.task('deploy', function() {
+  return gulp.src('public/**/*')
+    .pipe(ghPages());
 });
 
 gulp.task('styles', function() {
